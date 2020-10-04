@@ -303,6 +303,12 @@ TL;DR Wash yo hands and be a hero 🙌</div>
 		
 		try {
 			obj = await (await fetch(url)).json();
+			try{
+				console.log('api version ' + obj['app_version']);
+			}
+			catch(e) {
+				console.log('No api version found!');
+			}
 		} catch(e) {
 			console.log('error fetching menu from ' + url);
 		}
