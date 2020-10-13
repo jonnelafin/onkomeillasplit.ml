@@ -4,6 +4,8 @@
 <head>
   <!-- Title -->
   <title> onkomeillasplit.ml </title>
+  <!-- Favicon 404 Silencer -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -214,8 +216,12 @@ TL;DR Wash yo hands and be a hero 🙌</div>
 		
 		for(var i in splitTodLow){
 //			console.log(splitTod[i]);
-			var classN  = splitTodLow[i].split("(")[0];
-			var teachN  = splitTodLow[i].split("(")[1].replace("(","").replace(")","");
+            var classN  = ""
+            var teachN  = ""
+            try{
+			    classN  = splitTodLow[i].split("(")[0];
+			    teachN  = splitTodLow[i].split("(")[1].replace("(","").replace(")","");
+			}catch{}
 			table = table + `
 			  <tr>
 				<th scope="row"  style="width: 50%">` + classN + `</th>
@@ -251,8 +257,12 @@ TL;DR Wash yo hands and be a hero 🙌</div>
 //		console.log(splitTod);
 		for(var i in splitTod){
 //			console.log(splitTod[i]);
-			var classN  = splitTod[i].split("(")[0];
-			var teachN  = splitTod[i].split("(")[1].replace("(","").replace(")","");
+            var classN  = ""
+            var teachN  = ""
+            try{
+			    var classN  = splitTod[i].split("(")[0];
+			    var teachN  = splitTod[i].split("(")[1].replace("(","").replace(")","");
+			}catch{}
 			table = table + `
 			  <tr>
 				<th scope="row"  style="width: 50%">` + classN + `</th>
@@ -275,8 +285,12 @@ TL;DR Wash yo hands and be a hero 🙌</div>
 		`;
 		for(var i in normTod){
 //			console.log(normTod[i]);
-			var classN  = normTod[i].split("(")[0];
-			var teachN  = normTod[i].split("(")[1].replace("(","").replace(")","");
+            var classN  = ""
+            var teachN  = ""
+            try{
+			    var classN  = normTod[i].split("(")[0];
+			    var teachN  = normTod[i].split("(")[1].replace("(","").replace(")","");
+			}catch{}
 			table = table + `
 			  <tr>
 				<th scope="row"  style="width: 50%">` + classN + `</th>
